@@ -70,6 +70,7 @@ def turn(board)
   else
     turn(board)
   end
+  board
 end
 
 def turn_count(board)
