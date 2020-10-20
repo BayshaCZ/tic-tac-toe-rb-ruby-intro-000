@@ -70,7 +70,6 @@ def turn(board)
   else
     turn(board)
   end
-  board
 end
 
 def turn_count(board)
@@ -94,9 +93,8 @@ def current_player(board)
 end
 
 def play(board)
-  loop do
+  until over?(board)
     turn(board)
-    break if over?(board)
   end
   if won?(board)
     puts "Congratulations #{winner(board)}!"
